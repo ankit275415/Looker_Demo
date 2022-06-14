@@ -98,9 +98,8 @@ view: users {
     type: zipcode
     sql: ${TABLE}.zip ;;
   }
-
-  measure: count {
-    type: count
-    drill_fields: [id, first_name, last_name, orders.count]
-  }
+measure: count {
+  type: count
+  drill_fields: [id, last_name, first_name]
+}
 }
